@@ -10,9 +10,9 @@ Make a write function that prints in color and that will be used for ur headers
 export function mainHead(headText) {
     console.log(
       `%c 
-  ----------------
-  ${headText}
-  ----------------
+----------------
+${headText}
+----------------
           `,
       "color:yellow;font-size:1.2rem"
     );
@@ -22,7 +22,7 @@ export function mainHead(headText) {
   export function subHead(subText) {
     console.log(
       `%c 
-  ${subText}
+${subText}
               `,
       "color:orange;font-size:15px"
     );
@@ -33,7 +33,7 @@ export function mainHead(headText) {
   export function paraText(paraText) {
     console.log(
       `%c 
-  ${paraText}
+${paraText}
           `,
       "color:#15F5BA;font-size:13px;font-style:italic "
     );
