@@ -18,6 +18,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  transition: all 300ms;
 }
 
 html {
@@ -593,7 +594,7 @@ h4 {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 60rem;
-  background-color: #25041e;
+  background-color: #0e010b;
   padding: 5rem 6rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
@@ -683,4 +684,12 @@ h4 {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.ibox:focus {
+  outline: 5px solid #a31672;
+  color: #9e16a3;
+  overflow: auto;
+  background-color: rgb(49, 3, 49);
+  box-shadow: 1px 1px 500px 10px hsla(306, 93%, 45%, 0.546);
 }
