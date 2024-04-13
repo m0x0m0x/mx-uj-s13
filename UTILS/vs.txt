@@ -1,0 +1,19 @@
+// Install following extensions which are not installed by default 
+// Prettier, Indent Rainbow , Error Lens, Obsidian Theme or mayukai theme , Color , Icons
+
+{
+    "workbench.colorTheme": "Tokyo Night",
+    "workbench.list.smoothScrolling": true,
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "editor.renderWhitespace": "all",
+    "editor.guides.bracketPairs": "active",
+    "editor.lineHeight": 2,
+    "editor.fontSize": 17,
+    "editor.fontFamily": "GoMono Nerd Font",
+    "workbench.iconTheme": "simple-icons",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
+    "editor.cursorSmoothCaretAnimation": "on"
+  }
