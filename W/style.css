@@ -525,7 +525,7 @@ h4 {
 
 /* SIGNUP */
 .section--sign-up {
-  background-color: #37383d;
+  background-color: #003565;
   border-top: none;
   border-bottom: 1px solid #444;
   text-align: center;
@@ -533,7 +533,7 @@ h4 {
 }
 
 .section--sign-up .section__header {
-  color: #fff;
+  /* color: #fff; */
   text-align: center;
 }
 
@@ -549,7 +549,7 @@ h4 {
 /* FOOTER */
 .footer {
   padding: 10rem 3rem;
-  background-color: #37383d;
+  /* background-color: #37383d; */
 }
 
 .footer__nav {
@@ -565,7 +565,7 @@ h4 {
 
 .footer__link {
   font-size: 1.6rem;
-  color: #eee;
+  color: #1fe0e0;
   text-decoration: none;
 }
 
@@ -578,7 +578,7 @@ h4 {
 
 .footer__copyright {
   font-size: 1.4rem;
-  color: #aaa;
+  /* color: #aaa; */
   text-align: center;
 }
 
