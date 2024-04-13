@@ -693,3 +693,7 @@ h4 {
   background-color: rgb(49, 3, 49);
   box-shadow: 1px 1px 500px 10px hsla(306, 93%, 45%, 0.546);
 }
+
+.ibox {
+  background-color: #0f0a1f;
+}
