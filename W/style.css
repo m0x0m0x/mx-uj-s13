@@ -28,9 +28,9 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  color: #444;
+  color: #03d4f1;
   line-height: 1.9;
-  background-color: #f3f3f3;
+  background-color: #0f0a1f;
 }
 
 /* GENERAL ELEMENTS */
@@ -97,7 +97,7 @@ body {
 }
 
 p {
-  color: #666;
+  color: #0cf25d;
 }
 
 /* This is BAD for accessibility! Don't do in the real world! */
