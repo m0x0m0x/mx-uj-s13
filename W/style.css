@@ -32,6 +32,10 @@ body {
   color: #03d4f1;
   line-height: 1.9;
   background-color: #0f0a1f;
+  background-image: url("./img/bg.webp"); /* Replace with actual GIF path */
+  /* background-repeat: no-repeat; Ensures the GIF doesn't repeat */
+  /* background-attachment: fixed; Makes the GIF fixed to the viewport */
+  background-size: contain;
 }
 
 /* GENERAL ELEMENTS */
