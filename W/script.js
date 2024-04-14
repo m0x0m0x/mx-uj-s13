@@ -38,6 +38,20 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
+/// Adding the funny noise script
+const funnyNoise = document.getElementById("funny-noise");
+
+window.addEventListener("wheel", function (event) {
+  // Check if the audio is already playing to prevent multiple instances
+  if (!funnyNoise.paused && funnyNoise.currentTime > 0 && !funnyNoise.ended) {
+    return;
+  }
+
+  // Reset the audio to the beginning and play it
+  funnyNoise.currentTime = 0;
+  funnyNoise.play();
+});
+
 //////////////////////
 // Learning stuff
 
