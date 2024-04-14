@@ -103,3 +103,7 @@ console.log(logo.src);
 //setting attribute
 logo.alt = "BootySmell";
 logo.setAttribute("Type", "fetishes");
+
+// Paths
+console.log(logo.src);
+console.log(logo.getAttribute("src"));
