@@ -82,3 +82,24 @@ document
       origin: { y: 0.6 },
     });
   });
+
+// Styles
+message.style.width = "120%";
+console.log(message.style.color);
+console.log(getComputedStyle(message).color);
+console.log(getComputedStyle(message).height);
+
+// Extracting the height
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height) + 10 + "px";
+
+// Custom properties = more like variables
+// document.documentElement.style.setProperty("--color-primary", "#092635");
+
+// Attributes
+const logo = document.querySelector(".nav__logo");
+console.log(logo.src);
+
+//setting attribute
+logo.alt = "BootySmell";
+logo.setAttribute("Type", "fetishes");
