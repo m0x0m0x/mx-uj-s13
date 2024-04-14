@@ -36,8 +36,44 @@ document.addEventListener("keydown", function (e) {
 //////////////////////
 // Learning stuff
 
-// console.log(document.documentElement);
-// console.log(document.head);
-// console.log(document.body);
+console.log(document.documentElement);
+console.log(document.head);
+console.log(document.body);
 
-document.querySelector(".header");
+const header = document.querySelector(".header");
+const allSections = document.querySelectorAll(".section");
+console.log(allSections);
+
+// getting a HTML Collection different from nodes
+document.getElementById("#section--1");
+const allButtons = document.getElementsByTagName("button");
+console.log(allButtons);
+
+console.log(document.getElementsByClassName(".btn"));
+
+// Creating and inserting elements
+const message = document.createElement("div");
+message.classList.add("cookie-message");
+message.textContent = "Sucking and fucking now";
+message.innerHTML =
+  'Sucking and fucking now <button class="btn btn--close-cookie"> RAPE!</button>';
+
+// This is also for moving elements
+// header.prepend(message);
+// header.append(message);
+// header.append(message.cloneNode(true));
+
+header.before(message);
+// header.after(message);
+
+//Deelete Elements from the dom
+document
+  .querySelector(".btn--close-cookie")
+  .addEventListener("click", function () {
+    message.remove();
+    confetti({
+      particleCount: 1000,
+      spread: 170,
+      origin: { y: 0.6 },
+    });
+  });
