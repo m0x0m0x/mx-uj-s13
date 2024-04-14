@@ -704,3 +704,8 @@ h4 {
 .ibox {
   background-color: #0f0a1f;
 }
+
+/* rounded class to add to images */
+.round {
+  border-radius: 100px;
+}
