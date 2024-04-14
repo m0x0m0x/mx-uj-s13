@@ -190,6 +190,7 @@ img {
 
 .header__title {
   flex: 1;
+  overflow: hidden;
 
   max-width: 115rem;
   display: grid;
@@ -716,4 +717,14 @@ h4 {
 /* rounded class to add to images */
 .round {
   border-radius: 100px;
+}
+
+/* image zoom in on hover */
+.blowup {
+  transition: all 800ms ease-in-out;
+  overflow: hidden;
+}
+.blowup:hover {
+  transform: scale(1.3);
+  cursor: zoom-in;
 }
