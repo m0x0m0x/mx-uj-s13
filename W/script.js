@@ -114,3 +114,10 @@ console.log(link.href);
 console.log(link.getAttribute("href"));
 
 // Attributes - Data Attributes
+/* 
+Code for working with classes 
+*/
+logo.classList.add("v claz1");
+logo.classList.remove("v claz1");
+logo.classList.toggle("v claz1");
+logo.classList.contains("v claz1");
