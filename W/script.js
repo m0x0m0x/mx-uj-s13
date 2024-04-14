@@ -107,3 +107,10 @@ logo.setAttribute("Type", "fetishes");
 // Paths
 console.log(logo.src);
 console.log(logo.getAttribute("src"));
+
+// Links
+const link = document.querySelector(".twitter-link");
+console.log(link.href);
+console.log(link.getAttribute("href"));
+
+// Attributes - Data Attributes
