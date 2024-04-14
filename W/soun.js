@@ -9,21 +9,29 @@ Source Web - https://freesound.org/search/?f=grouping_pack:%2239000_Female%20Sex
 //////////////////////////////
 // === Login Button Sond ===
 
-const Logbtn = document.querySelector(".login__btn");
-const clickSound = document.getElementById("clickSound");
-Logbtn.addEventListener("click", () => {
-  clickSound.currentTime = 0; // Reset the audio to the beginning
-  clickSound.play(); // Play the click sound
-});
+// const Logbtn = document.querySelector(".login__btn");
+// const clickSound = document.getElementById("clickSound");
+// Logbtn.addEventListener("click", () => {
+//   clickSound.currentTime = 0; // Reset the audio to the beginning
+//   clickSound.play(); // Play the click sound
+// });
 
-//////////////////////////////
-// === OpenAccountSond ===
+// //////////////////////////////
+// // === OpenAccountSond ===
 
-const opnbtn = document.querySelector(
-  ".nav__link.nav__link--btn.btn--show-modal"
-);
-const openSound = document.getElementById("openSound");
-Logbtn.addEventListener("click", () => {
-  openSound.currentTime = 0; // Reset the audio to the beginning
-  openSound.play(); // Play the click sound
+// const opnbtn = document.querySelector(".btn.btn--show-modal");
+// const openSound = document.getElementById("openSound");
+// opnbtn.addEventListener("click", () => {
+//   openSound.currentTime = 0; // Reset the audio to the beginning
+//   openSound.play(); // Play the click sound
+// });
+
+// given my mistral
+document.addEventListener("DOMContentLoaded", () => {
+  const opnbtn = document.querySelector(".btn.btn--show-modal");
+  const openSound = document.getElementById("openSound");
+  opnbtn.addEventListener("click", () => {
+    openSound.currentTime = 0; // Reset the audio to the beginning
+    openSound.play(); // Play the click sound
+  });
 });
