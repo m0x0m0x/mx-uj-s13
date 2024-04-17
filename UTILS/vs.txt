@@ -1,6 +1,6 @@
 // Install following extensions which are not installed by default 
-// Prettier, Indent Rainbow , Error Lens, Obsidian Theme or mayukai theme , Color , Icons
-
+// Prettier, Indent Rainbow , Error Lens Color , Icons
+// Obsidian Theme / Mayuki Theme 
 {
     "workbench.colorTheme": "Tokyo Night",
     "workbench.list.smoothScrolling": true,
