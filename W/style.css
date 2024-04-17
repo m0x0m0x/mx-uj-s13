@@ -100,6 +100,9 @@ body {
   cursor: pointer;
   transition: all 0.3s;
 }
+.btn--scroll-to:hover {
+  letter-spacing: 3px;
+}
 
 p {
   color: #0cf25d;

@@ -135,3 +135,14 @@ Code for working with classes
 // logo.classList.remove("v claz1");
 // logo.classList.toggle("v claz1");
 // logo.classList.contains("v claz1"); // called contain
+
+// Implementing the scroll function
+const btnScrollTo = document.querySelector(".btn--scroll-to");
+const section1 = document.querySelector("#section--1");
+
+btnScrollTo.addEventListener("click", function (e) {
+  //getting coordinat of the image we want to scroll to
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+  console.log("heheh");
+});
