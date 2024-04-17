@@ -141,8 +141,38 @@ const btnScrollTo = document.querySelector(".btn--scroll-to");
 const section1 = document.querySelector("#section--1");
 
 btnScrollTo.addEventListener("click", function (e) {
-  //getting coordinat of the image we want to scroll to
+  //getting coordinates of the image we want to scroll to
   const s1coords = section1.getBoundingClientRect();
   console.log(s1coords);
   console.log("heheh");
+
+  // Getting position of the actual element
+  console.log(e.target.getBoundingClientRect());
+
+  // getting the scroll position
+  console.log("Current scroll (X/Y)", window.scrollX, scrollY);
+
+  // Reading height and width of viewport
+  console.log(
+    "heignt/width",
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  // Set destination point
+  // window.scrollTo(
+  //   s1coords.left + window.scrollX,
+  //   s1coords.top + window.scrollY
+  // );
+
+  // The folllowing code implements the smooth scroolling
+
+  // window.scrollTo({
+  //   left: s1coords.left + window.scrollX,
+  //   top: s1coords.top + window.scrollY,
+  //   behavior: "smooth",
+  // });
+
+  // Modern method
+  section1.scrollIntoView({ behavior: "smooth" });
 });

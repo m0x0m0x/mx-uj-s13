@@ -104,6 +104,9 @@ body {
   letter-spacing: 3px;
   color: #ff55bb;
 }
+.btn--scroll-to:active {
+  font-size: 2rem;
+}
 
 p {
   color: #0cf25d;
