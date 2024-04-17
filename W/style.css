@@ -102,6 +102,7 @@ body {
 }
 .btn--scroll-to:hover {
   letter-spacing: 3px;
+  color: #ff55bb;
 }
 
 p {
