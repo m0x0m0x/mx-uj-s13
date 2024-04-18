@@ -190,9 +190,13 @@ const h1 = document.querySelector("h1");
 
 const alertH1 = function (e) {
   alert("addEVentListener: LickPussy");
+  console.log(`%c LickHerAssandAndPussy`, "color:red;font-size:5rem");
+
+  // h1.removeEventListener("mouseenter", alertH1);
 };
 
 h1.addEventListener("mouseenter", alertH1);
+setTimeout(() => h1.removeEventListener("mouseenter", alertH1), 3000);
 
 // Attaching elements - Old method
 // h1.onmouseenter = function (e) {
