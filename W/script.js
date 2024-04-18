@@ -204,3 +204,5 @@ setTimeout(() => h1.removeEventListener("mouseenter", alertH1), 3000);
 // };
 
 // Removing an event handler
+
+// Another method of using HTML attribute
