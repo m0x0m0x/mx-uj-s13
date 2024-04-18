@@ -1,5 +1,5 @@
 // Install following extensions which are not installed by default 
-// Prettier, Indent Rainbow , Error Lens Color , Icons
+// Prettier, Indent Rainbow , Error Lens Color , Sweet Icons
 // Obsidian Theme / Mayuki Theme 
 {
     "workbench.colorTheme": "Tokyo Night",
