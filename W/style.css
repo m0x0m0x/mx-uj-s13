@@ -108,6 +108,11 @@ body {
   font-size: 2rem;
 }
 
+.btn--show-modal:hover {
+  background-color: #0e010b;
+  color: #0cf25d;
+}
+
 p {
   color: #0cf25d;
 }

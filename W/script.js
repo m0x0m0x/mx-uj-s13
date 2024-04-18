@@ -173,6 +173,30 @@ btnScrollTo.addEventListener("click", function (e) {
   //   behavior: "smooth",
   // });
 
-  // Modern method
+  // Modern method - Fastmethod to jump to a section
   section1.scrollIntoView({ behavior: "smooth" });
 });
+
+///////////////////////////////////////
+/*
+190: Types of events and handlers 
+- Work on that will be here 
+https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseenter_event
+- Location of these events for study 
+*/
+
+// newer method  - can add multiple function
+const h1 = document.querySelector("h1");
+
+const alertH1 = function (e) {
+  alert("addEVentListener: LickPussy");
+};
+
+h1.addEventListener("mouseenter", alertH1);
+
+// Attaching elements - Old method
+// h1.onmouseenter = function (e) {
+//   alert("onMouseEnter: LickPussy");
+// };
+
+// Removing an event handler
