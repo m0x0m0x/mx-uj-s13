@@ -140,7 +140,17 @@ tabsContainer.addEventListener("click", function (e) {
   // Guard clause
   if (!clicked) return;
 
+  // Active tab
+  tabs.forEach((t) => t.classList.remove("operations__tab--active"));
   clicked.classList.add("operations__tab--active");
+
+  tabsContent.forEach((c) => c.classList.remove("operations__content--active"));
+
+  // Activate content
+  console.log(clicked.dataset.tab);
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add("operations__content--active");
 });
 
 //////////////////////////////////////////////////////////////////
