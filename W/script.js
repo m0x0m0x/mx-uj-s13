@@ -291,3 +291,20 @@ console.log(h11.children);
 // Going upwards
 console.log(h11.parentNode);
 console.log(h11.parentElement);
+
+// Closest method
+// h1.closest(".header").style.background = "var(--gradient-secondary)";
+// h1.closest(".header").style.background = "var(--gradient-primary)";
+
+//Going sideways = Selecting siblings
+console.log(h11.previousElementSibling);
+console.log(h11.nextElementSibling);
+
+console.log(h1.previousSibling);
+console.log(h1.nextSibling);
+
+//Select all siblings , go up to parent element and read all childrenf from here
+// console.log(h11.parentElement.children);
+// [...h11.parentElement.children].forEach(function (el) {
+//   if (el !== h11) el.style.transform = "scale(0.5)";
+// });
