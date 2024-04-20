@@ -52,7 +52,67 @@ window.addEventListener("wheel", function (event) {
   funnyNoise.play();
 });
 
-//////////////////////
+///////////////////////////////////
+// Scrolling function
+// Implementing the scroll function
+const btnScrollTo = document.querySelector(".btn--scroll-to");
+const section1 = document.querySelector("#section--1");
+
+btnScrollTo.addEventListener("click", function (e) {
+  //getting coordinates of the image we want to scroll to
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+  console.log("heheh");
+
+  // Getting position of the actual element
+  console.log(e.target.getBoundingClientRect());
+
+  // getting the scroll position
+  console.log("Current scroll (X/Y)", window.scrollX, scrollY);
+
+  // Reading height and width of viewport
+  console.log(
+    "heignt/width",
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  // Set destination point
+  // window.scrollTo(
+  //   s1coords.left + window.scrollX,
+  //   s1coords.top + window.scrollY
+  // );
+
+  // The folllowing code implements the smooth scroolling
+
+  // window.scrollTo({
+  //   left: s1coords.left + window.scrollX,
+  //   top: s1coords.top + window.scrollY,
+  //   behavior: "smooth",
+  // });
+
+  // Modern method - Fastmethod to jump to a section
+  section1.scrollIntoView({ behavior: "smooth" });
+});
+
+/////////////////////////////////////
+// Page Navigation
+
+document.querySelectorAll(".nav__link").forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const id = this.getAttribute("href");
+    console.log(id);
+
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
 // Learning stuff
 
 console.log(document.documentElement);
@@ -136,47 +196,6 @@ Code for working with classes
 // logo.classList.toggle("v claz1");
 // logo.classList.contains("v claz1"); // called contain
 
-// Implementing the scroll function
-const btnScrollTo = document.querySelector(".btn--scroll-to");
-const section1 = document.querySelector("#section--1");
-
-btnScrollTo.addEventListener("click", function (e) {
-  //getting coordinates of the image we want to scroll to
-  const s1coords = section1.getBoundingClientRect();
-  console.log(s1coords);
-  console.log("heheh");
-
-  // Getting position of the actual element
-  console.log(e.target.getBoundingClientRect());
-
-  // getting the scroll position
-  console.log("Current scroll (X/Y)", window.scrollX, scrollY);
-
-  // Reading height and width of viewport
-  console.log(
-    "heignt/width",
-    document.documentElement.clientHeight,
-    document.documentElement.clientWidth
-  );
-
-  // Set destination point
-  // window.scrollTo(
-  //   s1coords.left + window.scrollX,
-  //   s1coords.top + window.scrollY
-  // );
-
-  // The folllowing code implements the smooth scroolling
-
-  // window.scrollTo({
-  //   left: s1coords.left + window.scrollX,
-  //   top: s1coords.top + window.scrollY,
-  //   behavior: "smooth",
-  // });
-
-  // Modern method - Fastmethod to jump to a section
-  section1.scrollIntoView({ behavior: "smooth" });
-});
-
 ///////////////////////////////////////
 /*
 190: Types of events and handlers 
@@ -207,33 +226,33 @@ setTimeout(() => h1.removeEventListener("mouseenter", alertH1), 3000);
 
 // Another method of using HTML attribute
 
-/* 
-191: Event Propagation
-*/
-// Creating random colors
+// /*
+// 191: Event Propagation
+// */
+// // Creating random colors
 
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
-const randomColor = () => `
-rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})
-`;
-console.log(randomColor(0, 255));
+// const randomInt = (min, max) =>
+//   Math.floor(Math.random() * (max - min + 1) + min);
+// const randomColor = () => `
+// rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})
+// `;
+// console.log(randomColor(0, 255));
 
-// attaching event
-document.querySelector(".nav__link").addEventListener("click", function (e) {
-  this.style.backgroundColor = randomColor();
-  console.log("LINK", e.target, e.currentTarget);
+// // attaching event
+// document.querySelector(".nav__link").addEventListener("click", function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log("LINK", e.target, e.currentTarget);
 
-  // Stopping propogation - This will precvent others from being activated
-  e.stopPropagation();
-});
+//   // Stopping propogation - This will precvent others from being activated
+//   e.stopPropagation();
+// });
 
-document.querySelector(".nav__links").addEventListener("click", function (e) {
-  this.style.backgroundColor = randomColor();
-  console.log("CONTAINER", e.target, e.currentTarget);
-});
+// document.querySelector(".nav__links").addEventListener("click", function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log("CONTAINER", e.target, e.currentTarget);
+// });
 
-document.querySelector(".nav").addEventListener("click", function (e) {
-  this.style.backgroundColor = randomColor();
-  console.log("NAV", e.target, e.currentTarget);
-});
+// document.querySelector(".nav").addEventListener("click", function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log("NAV", e.target, e.currentTarget);
+// });
