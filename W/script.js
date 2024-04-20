@@ -206,3 +206,34 @@ setTimeout(() => h1.removeEventListener("mouseenter", alertH1), 3000);
 // Removing an event handler
 
 // Another method of using HTML attribute
+
+/* 
+191: Event Propagation
+*/
+// Creating random colors
+
+const randomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1) + min);
+const randomColor = () => `
+rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})
+`;
+console.log(randomColor(0, 255));
+
+// attaching event
+document.querySelector(".nav__link").addEventListener("click", function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log("LINK", e.target, e.currentTarget);
+
+  // Stopping propogation - This will precvent others from being activated
+  e.stopPropagation();
+});
+
+document.querySelector(".nav__links").addEventListener("click", function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log("CONTAINER", e.target, e.currentTarget);
+});
+
+document.querySelector(".nav").addEventListener("click", function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log("NAV", e.target, e.currentTarget);
+});
