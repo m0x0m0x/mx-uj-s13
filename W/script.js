@@ -125,6 +125,24 @@ document.querySelector(".nav__links").addEventListener("click", function (e) {
   }
 });
 
+// Tabbed Component
+const tabs = document.querySelectorAll(".operations__tab");
+const tabsContainer = document.querySelector(".operations__tab-container");
+const tabsContent = document.querySelectorAll(".operations__content");
+
+// tabs.forEach((t) => t.addEventListener("click", () => console.log("TAB")));
+
+// Do the above code with event delegation
+tabsContainer.addEventListener("click", function (e) {
+  const clicked = e.target.closest(".operations__tab");
+  console.log(clicked);
+
+  // Guard clause
+  if (!clicked) return;
+
+  clicked.classList.add("operations__tab--active");
+});
+
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
