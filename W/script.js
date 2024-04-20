@@ -272,3 +272,22 @@ setTimeout(() => h1.removeEventListener("mouseenter", alertH1), 3000);
 //   this.style.backgroundColor = randomColor();
 //   console.log("NAV", e.target, e.currentTarget);
 // });
+
+// 194: Dom Traversing
+
+const h11 = document.querySelector("h1");
+
+//going downwards - child element
+console.log(h11.querySelectorAll(".highlight"));
+
+// Childnodes are more deailed
+console.log(h11.childNodes);
+console.log(h11.children);
+
+// Note these can be done in the css but here doing it with JS instead where you can apply and remove styles
+// h11.firstElementChild.style.color = "white";
+// h11.lastElementChild.style.color = "black";
+
+// Going upwards
+console.log(h11.parentNode);
+console.log(h11.parentElement);
