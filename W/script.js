@@ -156,34 +156,34 @@ tabsContainer.addEventListener("click", function (e) {
 
 //////////////////////////////////////
 // menu Fade Animation
+
+// Function of the opacity isolated as its own funciton to be called in the event listeners
+const handleHover = function (e, opacity) {
+  if (e.target.classList.contains("nav__link")) {
+    // Selecting the necessary elements
+    const link = e.target;
+    const siblings = link.closest(".nav").querySelectorAll(".nav__link");
+    const logo = link.closest(".nav").querySelector("img");
+
+    siblings.forEach((el) => {
+      if (el != link) el.style.opacity = this;
+    });
+    logo.style.opacity = this;
+  }
+};
+
+// This method works but there is better way below
 const nav = document.querySelector(".nav");
-nav.addEventListener("mouseover", function (e) {
-  if (e.target.classList.contains("nav__link")) {
-    // Selecting the necessary elements
-    const link = e.target;
-    const siblings = link.closest(".nav").querySelectorAll(".nav__link");
-    const logo = link.closest(".nav").querySelector("img");
+// nav.addEventListener("mouseover", function (e) {
+//   handleHover(e, 0.5);
+// });
+// nav.addEventListener("mouseout", function (e) {
+//   handleHover(e, 1);
+// });
 
-    siblings.forEach((el) => {
-      if (el != link) el.style.opacity = 0.5;
-    });
-    logo.style.opacity = 0.5;
-  }
-});
-
-nav.addEventListener("mouseout", function (e) {
-  if (e.target.classList.contains("nav__link")) {
-    // Selecting the necessary elements
-    const link = e.target;
-    const siblings = link.closest(".nav").querySelectorAll(".nav__link");
-    const logo = link.closest(".nav").querySelector("img");
-
-    siblings.forEach((el) => {
-      if (el != link) el.style.opacity = 1;
-    });
-    logo.style.opacity = 1;
-  }
-});
+// Passing "argument " into handler
+nav.addEventListener("mouseover", handleHover.bind(0.5));
+nav.addEventListener("mouseout", handleHover.bind(1));
 
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
