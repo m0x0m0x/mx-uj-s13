@@ -159,10 +159,16 @@ const handleHover = function (e, opacity) {
 };
 
 /////////////////////////////////////////////
-// 197: Sticky navifation
+// 197: Sticky navigation
 window.addEventListener("scroll", function (e) {
-  console.log(e);
+  console.log(window.scrollY);
+  if (window.scrollY > initialCoords.top) nav.classList.add("sticky");
+  else nav.classList.remove("sticky");
 });
+
+//Determine position dynamically
+const initialCoords = section1.getBoundingClientRect();
+console.log(initialCoords);
 
 // This method works but there is better way below
 const nav = document.querySelector(".nav");
