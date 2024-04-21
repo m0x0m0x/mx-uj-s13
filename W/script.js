@@ -38,20 +38,6 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-/// Adding the funny noise script
-const funnyNoise = document.getElementById("funny-noise");
-
-window.addEventListener("wheel", function (event) {
-  // Check if the audio is already playing to prevent multiple instances
-  if (!funnyNoise.paused && funnyNoise.currentTime > 0 && !funnyNoise.ended) {
-    return;
-  }
-
-  // Reset the audio to the beginning and play it
-  funnyNoise.currentTime = 0;
-  funnyNoise.play();
-});
-
 ///////////////////////////////////
 // Scrolling function
 // Implementing the scroll function
@@ -171,6 +157,12 @@ const handleHover = function (e, opacity) {
     logo.style.opacity = this;
   }
 };
+
+/////////////////////////////////////////////
+// 197: Sticky navifation
+window.addEventListener("scroll", function (e) {
+  console.log(e);
+});
 
 // This method works but there is better way below
 const nav = document.querySelector(".nav");
