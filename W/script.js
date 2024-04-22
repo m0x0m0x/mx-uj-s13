@@ -160,18 +160,18 @@ const handleHover = function (e, opacity) {
 
 /////////////////////////////////////////////
 // 197: Sticky navigation
-window.addEventListener("scroll", function (e) {
-  console.log(window.scrollY);
-  if (window.scrollY > initialCoords.top) nav.classList.add("sticky");
-  else nav.classList.remove("sticky");
-});
+// window.addEventListener("scroll", function (e) {
+//   console.log(window.scrollY);
+//   if (window.scrollY > initialCoords.top) nav.classList.add("sticky");
+//   else nav.classList.remove("sticky");
+// });
 
 //Determine position dynamically
-const initialCoords = section1.getBoundingClientRect();
-console.log(initialCoords);
+// const initialCoords = section1.getBoundingClientRect();
+// console.log(initialCoords);
 
 // This method works but there is better way below
-const nav = document.querySelector(".nav");
+// const nav = document.querySelector(".nav");
 // nav.addEventListener("mouseover", function (e) {
 //   handleHover(e, 0.5);
 // });
@@ -180,8 +180,11 @@ const nav = document.querySelector(".nav");
 // });
 
 // Passing "argument " into handler
-nav.addEventListener("mouseover", handleHover.bind(0.5));
-nav.addEventListener("mouseout", handleHover.bind(1));
+// nav.addEventListener("mouseover", handleHover.bind(0.5));
+// nav.addEventListener("mouseout", handleHover.bind(1));
+
+////////////////////////////////////////////
+// Implement sticky navigation with intersection api
 
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
