@@ -299,7 +299,7 @@ const goToSlide = function (slide) {
 goToSlide(0);
 
 const nextSlide = function () {
-  if (curSlide === maxSlide) {
+  if (curSlide === maxSlide - 1) {
     curSlide = 0;
   } else {
     curSlide++;
