@@ -171,7 +171,7 @@ const handleHover = function (e, opacity) {
 // console.log(initialCoords);
 
 // This method works but there is better way below
-// const nav = document.querySelector(".nav");
+const nav = document.querySelector(".nav");
 // nav.addEventListener("mouseover", function (e) {
 //   handleHover(e, 0.5);
 // });
@@ -180,11 +180,42 @@ const handleHover = function (e, opacity) {
 // });
 
 // Passing "argument " into handler
-// nav.addEventListener("mouseover", handleHover.bind(0.5));
-// nav.addEventListener("mouseout", handleHover.bind(1));
+nav.addEventListener("mouseover", handleHover.bind(0.5));
+nav.addEventListener("mouseout", handleHover.bind(1));
 
 ////////////////////////////////////////////
-// Implement sticky navigation with intersection api
+// 198 Implement sticky navigation with intersection api
+
+// The following section was for study but afer it , you will implement sticky navigation using the intersection api
+// const obsCallback = function (entries, observer) {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//   });
+// };
+
+// const obsOptions = {
+//   root: null,
+//   threshold: [0, 0.2],
+// };
+
+// const observer = new IntersectionObserver(obsCallback, obsOptions);
+// observer.observe(section1);
+
+const headerS = document.querySelector(".header");
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isInterseting) nav.classList.add("sticky");
+  else nav.classList.remove("sticky");
+};
+
+const headerSObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+});
+headerSObserver.observe(headerS);
 
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
