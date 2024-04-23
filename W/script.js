@@ -286,25 +286,38 @@ const btnRight = document.querySelector(".slider__btn--right");
 let curSlide = 0;
 const maxSlide = slides.length;
 
-slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
-
 const slider = document.querySelector(".slider");
 slider.style.transform = "scale(0.5) translateX(-300px)";
 slider.style.overflow = "visible";
 
-// 1 0%, 2 100%, 3 200%, 4 400%
-btnRight.addEventListener("click", function () {
+const goToSlide = function (slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  );
+};
+
+goToSlide(0);
+
+const nextSlide = function () {
   if (curSlide === maxSlide) {
     curSlide = 0;
   } else {
     curSlide++;
   }
+  goToSlide(curSlide);
+};
 
-  slides.forEach(
-    (s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`)
-  );
-});
+const prevSlide = function () {
+  if (curSlide === 0) {
+    curSlide = maxSlide - 1;
+  } else {
+    curSlide--;
+  }
+  goToSlide(curSlide);
+};
 
+btnRight.addEventListener("click", nextSlide);
+btnLeft.addEventListener("click", prevSlide);
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
