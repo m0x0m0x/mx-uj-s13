@@ -299,7 +299,7 @@ const goToSlide = function (slide) {
 goToSlide(0);
 
 const nextSlide = function () {
-  if (curSlide === maxSlide - 1n) {
+  if (curSlide === maxSlide - 1) {
     curSlide = 0;
   } else {
     curSlide++;
@@ -318,6 +318,13 @@ const prevSlide = function () {
 
 btnRight.addEventListener("click", nextSlide);
 btnLeft.addEventListener("click", prevSlide);
+
+// Enabling the left and right keys
+document.addEventListener("keydown", function (e) {
+  console.log(e);
+  if (e.key === "ArrowLeft") prevSlide();
+});
+
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
